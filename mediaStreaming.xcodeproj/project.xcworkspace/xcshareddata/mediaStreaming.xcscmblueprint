@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "509AEBBAA1DCEFFD9791EAE0BC6E644E7B510E3E",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "509AEBBAA1DCEFFD9791EAE0BC6E644E7B510E3E" : 9223372036854775807,
+    "8CE366408ACBAF2B4284C087C094C0522EAC2479" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "30B157E3-2A25-4FE4-8967-D063FE40AB8B",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "509AEBBAA1DCEFFD9791EAE0BC6E644E7B510E3E" : "mediaStreaming\/",
+    "8CE366408ACBAF2B4284C087C094C0522EAC2479" : "..\/ios10\/BMPlayer"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "mediaStreaming",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "mediaStreaming.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/futomtom\/mediastreaming.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "509AEBBAA1DCEFFD9791EAE0BC6E644E7B510E3E"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/BrikerMan\/BMPlayer.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "8CE366408ACBAF2B4284C087C094C0522EAC2479"
+    }
+  ]
+}

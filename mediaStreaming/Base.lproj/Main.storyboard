@@ -18,7 +18,7 @@
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="UIProgressView">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -31,7 +31,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="h4W-5y-s48">
+                                    <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="h4W-5y-s48" customClass="BMTimeSlider" customModule="mediaStreaming" customModuleProvider="target">
                                         <rect key="frame" x="65.5" y="0.0" width="266.5" height="31"/>
                                     </slider>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="34:07" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BBy-Na-xeN">
@@ -53,12 +53,22 @@
                                 </constraints>
                                 <state key="normal" title="End workout"/>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f5H-70-Fvw" customClass="BMPlayerLayerView" customModule="mediaStreaming" customModuleProvider="target">
+                                <rect key="frame" x="187" y="333" width="1" height="1"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="1" id="AqF-42-3gK"/>
+                                    <constraint firstAttribute="height" constant="1" id="KaJ-od-Xls"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="63x-g4-MYs" secondAttribute="trailing" id="7MN-hS-geO"/>
+                            <constraint firstItem="f5H-70-Fvw" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Pt4-Wy-k8a"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Vje-u9-kbF" secondAttribute="bottom" id="WhT-wa-gOM"/>
                             <constraint firstItem="Vje-u9-kbF" firstAttribute="top" secondItem="63x-g4-MYs" secondAttribute="bottom" constant="40" id="ad6-KL-fmT"/>
+                            <constraint firstItem="f5H-70-Fvw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="d0i-E8-gg6"/>
                             <constraint firstItem="63x-g4-MYs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="mI4-22-ibb"/>
                             <constraint firstAttribute="trailing" secondItem="Vje-u9-kbF" secondAttribute="trailing" id="qfq-TJ-gco"/>
                             <constraint firstItem="Vje-u9-kbF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="rIe-Cd-o5i"/>
@@ -66,7 +76,8 @@
                     </view>
                     <connections>
                         <outlet property="currentTimeLabel" destination="YWM-bY-Y3L" id="HJK-BA-TeH"/>
-                        <outlet property="statusProgress" destination="8bC-Xf-vdC" id="yaH-Gu-OHi"/>
+                        <outlet property="playerLayer" destination="f5H-70-Fvw" id="dwq-6q-hPP"/>
+                        <outlet property="slider" destination="h4W-5y-s48" id="ZOc-Mi-E6P"/>
                         <outlet property="totalDurationLabel" destination="BBy-Na-xeN" id="m6D-C7-Zoy"/>
                     </connections>
                 </viewController>

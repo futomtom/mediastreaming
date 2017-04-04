@@ -12,8 +12,8 @@
 		FA106BE81E931FD0007136D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA106BE61E931FD0007136D6 /* Main.storyboard */; };
 		FA106BEA1E931FD0007136D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA106BE91E931FD0007136D6 /* Assets.xcassets */; };
 		FA106BED1E931FD0007136D6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA106BEB1E931FD0007136D6 /* LaunchScreen.storyboard */; };
-		FA106BF51E932280007136D6 /* BMTimeSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA106BF41E932280007136D6 /* BMTimeSlider.swift */; };
-		FA106BF71E934AF9007136D6 /* BMPlayerLayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA106BF61E934AF9007136D6 /* BMPlayerLayerView.swift */; };
+		FA106BF91E935810007136D6 /* BMPlayerLayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA106BF81E935810007136D6 /* BMPlayerLayerView.swift */; };
+		FA106BFB1E93583F007136D6 /* BMTimeSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA106BFA1E93583F007136D6 /* BMTimeSlider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,8 +24,8 @@
 		FA106BE91E931FD0007136D6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA106BEC1E931FD0007136D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA106BEE1E931FD0007136D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FA106BF41E932280007136D6 /* BMTimeSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BMTimeSlider.swift; path = ../../../ios10/BMPlayer/BMPlayer/Classes/BMTimeSlider.swift; sourceTree = "<group>"; };
-		FA106BF61E934AF9007136D6 /* BMPlayerLayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BMPlayerLayerView.swift; path = ../../../ios10/BMPlayer/BMPlayer/Classes/BMPlayerLayerView.swift; sourceTree = "<group>"; };
+		FA106BF81E935810007136D6 /* BMPlayerLayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BMPlayerLayerView.swift; sourceTree = "<group>"; };
+		FA106BFA1E93583F007136D6 /* BMTimeSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BMTimeSlider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,8 +60,8 @@
 			children = (
 				FA106BE21E931FD0007136D6 /* AppDelegate.swift */,
 				FA106BE41E931FD0007136D6 /* ViewController.swift */,
-				FA106BF61E934AF9007136D6 /* BMPlayerLayerView.swift */,
-				FA106BF41E932280007136D6 /* BMTimeSlider.swift */,
+				FA106BFA1E93583F007136D6 /* BMTimeSlider.swift */,
+				FA106BF81E935810007136D6 /* BMPlayerLayerView.swift */,
 				FA106BE61E931FD0007136D6 /* Main.storyboard */,
 				FA106BE91E931FD0007136D6 /* Assets.xcassets */,
 				FA106BEB1E931FD0007136D6 /* LaunchScreen.storyboard */,
@@ -144,9 +144,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA106BE51E931FD0007136D6 /* ViewController.swift in Sources */,
+				FA106BFB1E93583F007136D6 /* BMTimeSlider.swift in Sources */,
+				FA106BF91E935810007136D6 /* BMPlayerLayerView.swift in Sources */,
 				FA106BE31E931FD0007136D6 /* AppDelegate.swift in Sources */,
-				FA106BF71E934AF9007136D6 /* BMPlayerLayerView.swift in Sources */,
-				FA106BF51E932280007136D6 /* BMTimeSlider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
