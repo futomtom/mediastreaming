@@ -42,28 +42,41 @@ class ViewController: UIViewController {
 
 
 extension ViewController: BMPlayerLayerViewDelegate {
-  /*  public func bmPlayer(player: BMPlayerLayerView, playerIsPlaying playing: Bool) {
+    
+    public func bmPlayer(player: BMPlayerLayerView, playerStateDidChange state: BMPlayerState) {
+        switch state {
+        case BMPlayerState.readyToPlay:
+            break
+      
+        case BMPlayerState.buffering:
+            break
+      
+        case BMPlayerState.bufferFinished:
+            break
+       
+            
+        case BMPlayerState.playedToTheEnd:
+          break
+        default:
+            break
+        }
+        
        
     }
-    */
 
+    
   
     
     
     
-    public func bmPlayer(player: BMPlayerLayerView, playerStateDidChange state: BMPlayerState) {
-       
-      
-        
-    
-    }
-    
-    
-    
-    func playTimeDidChange(currentTime: TimeInterval, totalTime: TimeInterval) {
-        currentTimeLabel.text = formatSecondsToString(currentTime)
+    public func bmPlayer(player: BMPlayerLayerView, playTimeDidChange currentTime: TimeInterval, totalTime: TimeInterval) {
+        let str = formatSecondsToString(currentTime)
+        print(str)
+        currentTimeLabel.text = str
         totalDurationLabel.text = formatSecondsToString(totalTime)
         slider.value    = Float(currentTime) / Float(totalTime)
         
     }
+    
+   
 }

@@ -65,7 +65,7 @@ open class BMPlayerLayerView: UIView {
             return false
         }
         set {
-            self.isPlayingCached = isPlaying
+          //  self.isPlayingCached = isPlaying
         }
     }
     
@@ -74,13 +74,7 @@ open class BMPlayerLayerView: UIView {
     /// 计时器
     var timer       : Timer?
     
-    fileprivate var isPlayingCached = false {
-        didSet {
-            if isPlayingCached != oldValue {
-                delegate?.bmPlayer(player: self, playerIsPlaying: isPlayingCached)
-            }
-        }
-    }
+
     
     fileprivate var urlAsset: AVURLAsset?
     
@@ -226,6 +220,7 @@ open class BMPlayerLayerView: UIView {
             // 缓冲区有足够数据可以播放了
             item.addObserver(self, forKeyPath: "playbackLikelyToKeepUp", options: NSKeyValueObservingOptions.new, context: nil)
         }
+         setupTimer()
     }
     
     fileprivate func configPlayer(){
@@ -258,9 +253,17 @@ open class BMPlayerLayerView: UIView {
                 let currentTime = CMTimeGetSeconds(self.player!.currentTime())
                 let totalTime   = TimeInterval(playerItem.duration.value) / TimeInterval(playerItem.duration.timescale)
                 delegate?.bmPlayer(player: self, playTimeDidChange: currentTime, totalTime: totalTime)
+                let str = formatSecondsToString(currentTime)
+               // print(str)
             }
-            updateStatus(inclodeLoading: true)
+          //  updateStatus(inclodeLoading: true)
         }
+    }
+    
+    fileprivate func formatSecondsToString(_ secounds: TimeInterval) -> String {
+        let Min = Int(secounds / 60)
+        let Sec = Int(secounds.truncatingRemainder(dividingBy: 60))
+        return String(format: "%02d:%02d", Min, Sec)
     }
     
     fileprivate func updateStatus(inclodeLoading: Bool = false) {
@@ -325,7 +328,12 @@ open class BMPlayerLayerView: UIView {
                     if let timeInterVarl    = self.availableDuration() {
                         let duration        = item.duration
                         let totalDuration   = CMTimeGetSeconds(duration)
-                        delegate?.bmPlayer(player: self, loadedTimeDidChange: timeInterVarl, totalDuration: totalDuration)
+                        
+                        
+                      //  let uu = formatSecondsToString(timeInterVarl)
+                      //  print(uu)
+
+               //         delegate?.bmPlayer(player: self, playTimeDidChange: timeInterVarl, totalTime: totalDuration)
                     }
                     
                 case "playbackBufferEmpty":
